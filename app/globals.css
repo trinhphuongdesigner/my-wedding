@@ -2,15 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Love+Light&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+/* Font variables are defined in layout.tsx using next/font/google
+ * with font-display: swap for optimal performance
+ * --font-display: Great Vibes (decorative script font)
+ * --font-serif: Playfair Display (elegant serif font)
+ * --font-sans: Montserrat (clean sans-serif font)
+ */
 
 @layer base {
+  :root {
+    /* Font family variables - defined by Next.js font loader */
+    /* These are automatically injected via layout.tsx */
+  }
+
   body {
     @apply bg-cream-50 text-gray-800;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   }
   
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Base typography styles */
+  h1, h2, h3 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  p {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Display font for decorative elements */
+  .font-display {
+    font-family: var(--font-display), cursive, system-ui;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif), Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: var(--font-sans), system-ui, sans-serif;
   }
 }
 
@@ -24,7 +72,7 @@
   }
   
   .heading-script {
-    @apply font-script text-4xl md:text-5xl lg:text-6xl text-rose-400;
+    @apply font-display text-4xl md:text-5xl lg:text-6xl text-rose-400;
   }
   
   .heading-serif {

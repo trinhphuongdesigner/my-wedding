@@ -10,20 +10,23 @@ module.exports = {
       colors: {
         // Màu nền chính - kem nhạt
         cream: {
-          50: '#fefdfb',
-          100: '#fdf8f3',
-          200: '#f9f0e8',
-          300: '#f5e8dd',
+          50: '#FAF8F5',
+          100: '#F5F1ED',
+        },
+        // Màu be nhạt
+        beige: {
+          50: '#F5F1ED',
+          100: '#EBE5DD',
         },
         // Hồng pastel như trong ảnh
         rose: {
           50: '#fef7f7',
-          100: '#fdeaea',
+          100: '#FCE7E9',
           200: '#f9d1d1',
           300: '#f4a8a8',
-          400: '#ec7c7c',
-          500: '#e25555',
-          600: '#d13838',
+          400: '#E8B4B8',
+          500: '#E39FA4',
+          600: '#D88B91',
           700: '#b12a2a',
           800: '#942525',
           900: '#7c2525',
@@ -47,9 +50,9 @@ module.exports = {
           100: '#fef6e7',
           200: '#fdebc4',
           300: '#fbd88a',
-          400: '#f9c74f',
-          500: '#f7b32b',
-          600: '#e8991c',
+          400: '#E5C77F',
+          500: '#D4AF37',
+          600: '#C19B2E',
           700: '#c17817',
           800: '#9d5e19',
           900: '#804f18',
@@ -69,10 +72,12 @@ module.exports = {
         }
       },
       fontFamily: {
-        serif: ['Cormorant Garamond', 'serif'],
-        sans: ['Montserrat', 'sans-serif'],
-        script: ['Great Vibes', 'cursive'],
-        'love-light': ['Love Light', 'cursive'],
+        display: ['var(--font-display)'],
+        serif: ['var(--font-serif)'],
+        sans: ['var(--font-sans)'],
+      },
+      aspectRatio: {
+        '3/4': '3 / 4',
       },
     },
   },
