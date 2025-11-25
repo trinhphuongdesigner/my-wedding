@@ -2,9 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Lightbox from './components/Lightbox';
+import FallingElements from './components/FallingElements';
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const galleryImages = Array.from({ length: 8 }, (_, i) => `/images/gallery-${i + 1}.jpg`);
 
   useEffect(() => {
     // Scroll reveal animation
@@ -67,6 +73,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-cream-50">
+      {/* Falling Hearts and Petals Animation */}
+      <FallingElements />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-cream-50/70 to-beige-50/80 z-10"></div>
@@ -102,14 +111,31 @@ export default function Home() {
 
       {/* Photo Gallery Section */}
       <section className="section-container-centered reveal bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
-            <div key={index} className="relative aspect-[3/4] overflow-hidden rounded transition-transform hover:scale-105">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 max-w-6xl mx-auto mb-16">
+          {[
+            { index: 1, height: 600 },
+            { index: 2, height: 500 },
+            { index: 3, height: 550 },
+            { index: 4, height: 650 },
+            { index: 5, height: 500 },
+            { index: 6, height: 600 },
+            { index: 7, height: 550 },
+            { index: 8, height: 500 }
+          ].map(({ index, height }) => (
+            <div
+              key={index}
+              className="mb-4 break-inside-avoid relative overflow-hidden cursor-pointer border-4 border-white"
+              onClick={() => {
+                setLightboxIndex(index - 1);
+                setLightboxOpen(true);
+              }}
+            >
               <Image
                 src={`/images/gallery-${index}.jpg`}
                 alt={`Ảnh cưới ${index}`}
-                fill
-                className="object-cover"
+                width={400}
+                height={height}
+                className="w-full transition-transform duration-300 hover:scale-110"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
@@ -117,6 +143,15 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <Lightbox
+          images={galleryImages}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+        />
+      )}
 
       {/* Wedding Events Section - Inspired by reference image */}
       <section className="section-container bg-cream-50 reveal">
@@ -161,18 +196,18 @@ export default function Home() {
                     <Image
                       src="/images/traitim.png"
                       alt="Wedding day"
-                      width={16}
-                      height={16}
-                      className="absolute top-0.5 md:top-1 left-1/2 transform -translate-x-1/2 w-3 h-3 md:w-4 md:h-4"
+                      width={40}
+                      height={40}
+                      className="absolute inset-0 w-8 h-8 md:w-10 md:h-10 opacity-80 m-auto animate-heartbeat"
                     />
                   )}
                   {day === 7 && (
                     <Image
                       src="/images/traitim.png"
                       alt="Wedding day"
-                      width={16}
-                      height={16}
-                      className="absolute top-0.5 md:top-1 left-1/2 transform -translate-x-1/2 w-3 h-3 md:w-4 md:h-4"
+                      width={40}
+                      height={40}
+                      className="absolute inset-0 w-8 h-8 md:w-10 md:h-10 opacity-80 m-auto animate-heartbeat"
                     />
                   )}
                 </div>

@@ -284,14 +284,24 @@
   - Điều chỉnh nếu cần
   - _Requirements: All_
 
-- [ ] 24. Tạo font constants configuration file
+- [x] 24. Tạo font constants configuration file
+
+
+
+
+
   - Tạo file lib/fonts.ts với FONT_CONFIG object
   - Import Google Fonts và local font (iCiel Rift Regular)
   - Export displayFont, serifFont, sansFont, eventFont
   - Cập nhật layout.tsx để sử dụng fonts từ lib/fonts.ts
   - _Requirements: 14.1, 14.2, 14.3, 14.4_
 
-- [ ] 25. Implement Image Lightbox component
+- [x] 25. Implement Image Lightbox component
+
+
+
+
+
   - Tạo component Lightbox với full-screen view
   - Implement Previous/Next navigation buttons
   - Implement thumbnail strip với horizontal scroll
@@ -300,7 +310,12 @@
   - Thêm smooth transitions giữa các ảnh
   - _Requirements: 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.7, 9.8, 9.9_
 
-- [ ] 26. Cập nhật Gallery thành Masonry layout
+- [x] 26. Cập nhật Gallery thành Masonry layout
+
+
+
+
+
   - Thay đổi gallery layout sang columns-based masonry
   - Thêm viền trắng (border-4 border-white) cho mỗi ảnh
   - Xóa border radius (không dùng rounded)
@@ -309,20 +324,35 @@
   - Randomize chiều cao ảnh để tạo hiệu ứng đan xen
   - _Requirements: 10.1, 10.2, 10.3, 10.4_
 
-- [ ] 27. Cập nhật Calendar heart icon
+- [x] 27. Cập nhật Calendar heart icon
+
+
+
+
+
   - Tăng kích thước icon trái tim (w-8 h-8 md:w-10 md:h-10)
   - Đặt icon absolute inset-0 để bao trọn ô ngày
   - Thêm opacity-80 để không che khuất số ngày
   - _Requirements: 11.1, 11.2_
 
-- [ ] 28. Cập nhật Couple Section styling
+- [x] 28. Cập nhật Couple Section styling
+
+
+
+
+
   - Thay đổi section container thành w-full để full-width background
   - Cập nhật tên cô dâu chú rể sử dụng font-display với text-3xl md:text-4xl
   - Cập nhật màu tên thành text-rose-400
   - Xóa text "The Groom" và "The Bride"
   - _Requirements: 12.1, 12.2, 12.3_
 
-- [ ] 29. Implement Falling Hearts and Petals animation
+- [x] 29. Implement Falling Hearts and Petals animation
+
+
+
+
+
   - Tạo component FallingElements với hearts và petals
   - Implement CSS keyframes cho fall và sway animations
   - Randomize vị trí, delay, và duration cho mỗi element
@@ -330,6 +360,9 @@
   - _Requirements: 16.1, 16.2, 16.3, 16.4_
 
 - [ ] 30. Implement Background Music Player
+
+
+
   - Tạo component MusicPlayer với audio element
   - Implement auto-play on mount
   - Implement toggle button với icon Volume2/VolumeX
@@ -360,6 +393,8 @@
   - Thêm transition classes cho buttons
   - Thêm transition classes cho icons
   - Thêm transition classes cho images
+  - Thêm hiệu ứng trái tim bung ra tại vị trí con trỏ chuột.
+  - Thêm hiệu ứng cánh hoa rơi trên website.
   - Verify tất cả hover effects mượt mà
   - _Requirements: 15.1, 15.2, 15.3, 15.4_
 
