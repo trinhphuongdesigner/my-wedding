@@ -813,11 +813,11 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="font-sans text-sm text-gray-600">Chi nhánh:</span>
-                  <span className="font-sans font-medium text-xs">Hải Châu Đà Nẵng</span>
+                  <span className="font-sans font-medium text-xs">TP. HCM</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="font-sans text-sm text-gray-600">Số tài khoản:</span>
-                  <span className="font-mono font-medium">9386592529</span>
+                  <span className="font-mono font-medium">19035853595011</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="font-sans text-sm text-gray-600">Chủ tài khoản:</span>
