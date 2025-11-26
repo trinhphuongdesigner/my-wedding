@@ -114,6 +114,23 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-cream-50">
+      {/* Sticky Header - Shows when scrolling */}
+      <div className={`fixed top-0 left-0 right-0 z-50 bg-blue-600/95 backdrop-blur-sm shadow-lg transition-transform duration-300 ${showScrollTop ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="font-display text-2xl md:text-3xl text-white">
+              Phương & Hiền
+            </div>
+            <div className="hidden md:block h-6 w-px bg-white/30"></div>
+            <div className="hidden md:flex flex-col">
+              <span className="font-event text-xs text-white/80 uppercase tracking-wider">Save Our Date</span>
+              <span className="font-event text-sm text-white">04.04.2026</span>
+            </div>
+          </div>
+          <div className="md:hidden font-event text-sm text-white">04.04.2026</div>
+        </div>
+      </div>
+      
       {/* Falling Hearts and Petals Animation */}
       <FallingElements />
       
@@ -133,7 +150,8 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-cream-50/40 to-beige-50/50 z-10"></div>
+        {/* Blue overlay for better text contrast */}
+        <div className="absolute inset-0 bg-blue-400/40 z-10"></div>
 
         {/* Hero Image */}
         <div className="absolute inset-0">
@@ -148,13 +166,131 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-20 text-center px-6">
-          <div className="font-display text-5xl md:text-6xl lg:text-7xl mb-8 text-red-600 animate-fade-in-up">
-            Thân mời
+        <div className="relative z-20 text-center px-6 max-w-4xl mx-auto">
+          {/* Text container with blue background box */}
+          <div className="inline-block relative">
+            {/* Fireworks around the box - More and Bigger */}
+            <div className="firework-container">
+              {/* Top left fireworks - 16 rays */}
+              {[...Array(16)].map((_, i) => (
+                <div
+                  key={`tl-${i}`}
+                  className="firework bg-yellow-300"
+                  style={{
+                    top: '-80px',
+                    left: '-80px',
+                    width: '6px',
+                    height: '6px',
+                    '--tx': `${Math.cos(i * Math.PI / 8) * 80}px`,
+                    '--ty': `${Math.sin(i * Math.PI / 8) * 80}px`,
+                    animationDelay: `${i * 0.08}s`
+                  } as React.CSSProperties}
+                />
+              ))}
+              
+              {/* Top right fireworks - 16 rays */}
+              {[...Array(16)].map((_, i) => (
+                <div
+                  key={`tr-${i}`}
+                  className="firework bg-pink-300"
+                  style={{
+                    top: '-80px',
+                    right: '-80px',
+                    width: '6px',
+                    height: '6px',
+                    '--tx': `${Math.cos(i * Math.PI / 8) * 80}px`,
+                    '--ty': `${Math.sin(i * Math.PI / 8) * 80}px`,
+                    animationDelay: `${i * 0.08 + 0.4}s`
+                  } as React.CSSProperties}
+                />
+              ))}
+              
+              {/* Bottom left fireworks - 16 rays */}
+              {[...Array(16)].map((_, i) => (
+                <div
+                  key={`bl-${i}`}
+                  className="firework bg-blue-300"
+                  style={{
+                    bottom: '-80px',
+                    left: '-80px',
+                    width: '6px',
+                    height: '6px',
+                    '--tx': `${Math.cos(i * Math.PI / 8) * 80}px`,
+                    '--ty': `${Math.sin(i * Math.PI / 8) * 80}px`,
+                    animationDelay: `${i * 0.08 + 0.8}s`
+                  } as React.CSSProperties}
+                />
+              ))}
+              
+              {/* Bottom right fireworks - 16 rays */}
+              {[...Array(16)].map((_, i) => (
+                <div
+                  key={`br-${i}`}
+                  className="firework bg-purple-300"
+                  style={{
+                    bottom: '-80px',
+                    right: '-80px',
+                    width: '6px',
+                    height: '6px',
+                    '--tx': `${Math.cos(i * Math.PI / 8) * 80}px`,
+                    '--ty': `${Math.sin(i * Math.PI / 8) * 80}px`,
+                    animationDelay: `${i * 0.08 + 1.2}s`
+                  } as React.CSSProperties}
+                />
+              ))}
+              
+              {/* Center top fireworks */}
+              {[...Array(12)].map((_, i) => (
+                <div
+                  key={`ct-${i}`}
+                  className="firework bg-red-300"
+                  style={{
+                    top: '-100px',
+                    left: '50%',
+                    width: '6px',
+                    height: '6px',
+                    '--tx': `${Math.cos(i * Math.PI / 6) * 70}px`,
+                    '--ty': `${Math.sin(i * Math.PI / 6) * 70}px`,
+                    animationDelay: `${i * 0.1}s`
+                  } as React.CSSProperties}
+                />
+              ))}
+              
+              {/* Center bottom fireworks */}
+              {[...Array(12)].map((_, i) => (
+                <div
+                  key={`cb-${i}`}
+                  className="firework bg-green-300"
+                  style={{
+                    bottom: '-100px',
+                    left: '50%',
+                    width: '6px',
+                    height: '6px',
+                    '--tx': `${Math.cos(i * Math.PI / 6) * 70}px`,
+                    '--ty': `${Math.sin(i * Math.PI / 6) * 70}px`,
+                    animationDelay: `${i * 0.1 + 0.6}s`
+                  } as React.CSSProperties}
+                />
+              ))}
+            </div>
+            
+            {/* Blue box behind couple names with tilt animation */}
+            <div className="bg-blue-600/90 px-6 md:px-10 lg:px-12 py-4 md:py-6 mb-4 md:mb-6 animate-fade-in-up animate-tilt">
+              <div className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white">
+                Phương & Hiền
+              </div>
+            </div>
+            
+            {/* Save Our Date Text */}
+            <h1 className="font-event text-sm md:text-base lg:text-lg tracking-[0.3em] mb-3 md:mb-4 text-white animate-fade-in-up uppercase" style={{ animationDelay: '0.2s', textShadow: '2px 2px 6px rgba(0,0,0,0.5)' }}>
+              SAVE OUR DATE
+            </h1>
+            
+            {/* Wedding Date */}
+            <div className="font-event text-3xl md:text-4xl lg:text-5xl text-white animate-fade-in-up" style={{ animationDelay: '0.4s', textShadow: '2px 2px 6px rgba(0,0,0,0.5)' }}>
+              04.04.2026
+            </div>
           </div>
-          <h1 className="font-serif text-base md:text-lg lg:text-xl tracking-[0.3em] mb-12 text-gray-800 animate-fade-in-up uppercase" style={{ animationDelay: '0.2s' }}>
-            ĐẾN DỰ LỄ CƯỚI CỦA CHÚNG MÌNH
-          </h1>
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
