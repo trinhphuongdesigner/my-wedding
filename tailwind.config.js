@@ -79,6 +79,9 @@ module.exports = {
       aspectRatio: {
         '3/4': '3 / 4',
       },
+      borderWidth: {
+        '3': '3px',
+      },
     },
   },
   plugins: [],

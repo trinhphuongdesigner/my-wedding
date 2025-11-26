@@ -15,6 +15,9 @@ export default function Home() {
   const galleryImages = Array.from({ length: 8 }, (_, i) => `/images/gallery-${i + 1}.jpg`);
 
   useEffect(() => {
+    // Scroll to top on page load/reload
+    window.scrollTo(0, 0);
+    
     // Scroll reveal animation
     const observerOptions = {
       threshold: 0.1,
@@ -31,15 +34,27 @@ export default function Home() {
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-    // Scroll to top button visibility
+    // Scroll to top button visibility and trigger music
+    let hasTriggeredMusic = false;
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      const scrollY = window.scrollY;
+      setShowScrollTop(scrollY > 300);
+      
+      // Trigger music when user scrolls past 300px (same threshold as scroll-to-top button)
+      if (scrollY > 300 && !hasTriggeredMusic) {
+        hasTriggeredMusic = true;
+        window.dispatchEvent(new CustomEvent('triggerMusic'));
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // Heart burst effect on click
+    // Heart burst effect on click - Reduced on mobile for performance
     const handleClick = (e: MouseEvent) => {
+      // Limit heart bursts on mobile (only 1 in 3 clicks)
+      const isMobile = window.innerWidth < 768;
+      if (isMobile && Math.random() > 0.33) return;
+      
       const newHeart = {
         id: Date.now(),
         x: e.clientX,
@@ -55,8 +70,8 @@ export default function Home() {
 
     document.addEventListener('click', handleClick);
 
-    // Countdown timer - Updated to 11/4/2026 (Saturday)
-    const countdownDate = new Date('2026-04-11T11:00:00').getTime();
+    // Countdown timer - Updated to 4/4/2026 (Saturday) - Vu Quy event
+    const countdownDate = new Date('2026-04-04T11:45:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -118,7 +133,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-cream-50/70 to-beige-50/80 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-cream-50/40 to-beige-50/50 z-10"></div>
 
         {/* Hero Image */}
         <div className="absolute inset-0">
@@ -134,10 +149,10 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center px-6">
-          <div className="font-display text-5xl md:text-6xl lg:text-7xl mb-8 text-rose-400 animate-fade-in-up">
+          <div className="font-display text-5xl md:text-6xl lg:text-7xl mb-8 text-red-600 animate-fade-in-up">
             Thân mời
           </div>
-          <h1 className="font-serif text-base md:text-lg lg:text-xl tracking-[0.3em] mb-12 text-gray-600 animate-fade-in-up uppercase" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-serif text-base md:text-lg lg:text-xl tracking-[0.3em] mb-12 text-gray-800 animate-fade-in-up uppercase" style={{ animationDelay: '0.2s' }}>
             ĐẾN DỰ LỄ CƯỚI CỦA CHÚNG MÌNH
           </h1>
         </div>
@@ -152,7 +167,7 @@ export default function Home() {
       {/* Couple Introduction */}
       <section className="section-container-centered bg-white reveal">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gray-300 mb-4">Chúng Mình Là</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">Chúng Mình Là</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
@@ -166,6 +181,7 @@ export default function Home() {
                 className="object-cover"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                loading="lazy"
               />
             </div>
             <h3 className="font-names text-2xl md:text-3xl mb-3 text-gray-700">Đình Phương</h3>
@@ -185,6 +201,7 @@ export default function Home() {
                 className="object-cover"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                loading="lazy"
               />
             </div>
             <h3 className="font-names text-2xl md:text-3xl mb-3 text-gray-700">Phương Hiền</h3>
@@ -199,7 +216,7 @@ export default function Home() {
       {/* Love Story - MOVED BEFORE CALENDAR */}
       <section className="section-container-centered bg-cream-50 reveal">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gray-300 mb-4">Câu Chuyện Tình Yêu</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">Câu Chuyện Tình Yêu</h2>
         </div>
 
         <div className="max-w-3xl mx-auto px-4">
@@ -329,9 +346,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Gallery Section */}
+      {/* Photo Gallery Section - Optimized for mobile */}
       <section className="section-container-centered reveal bg-white">
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-4 max-w-6xl mx-auto mb-16">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-3 md:gap-4 max-w-6xl mx-auto mb-16">
           {[
             { index: 1, height: 600 },
             { index: 2, height: 500 },
@@ -344,7 +361,7 @@ export default function Home() {
           ].map(({ index, height }) => (
             <div
               key={index}
-              className="mb-4 break-inside-avoid relative overflow-hidden cursor-pointer border-4 border-white group"
+              className="mb-3 md:mb-4 break-inside-avoid relative overflow-hidden cursor-pointer border-3 md:border-4 border-white group touch-manipulation"
               onClick={() => {
                 setLightboxIndex(index - 1);
                 setLightboxOpen(true);
@@ -358,7 +375,14 @@ export default function Home() {
                 className="w-full transition-transform duration-500 group-hover:scale-105"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                loading="lazy"
               />
+              {/* Zoom icon overlay - hidden on mobile for cleaner look */}
+              <div className="hidden md:flex absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors items-center justify-center">
+                <svg className="text-white opacity-0 group-hover:opacity-100 transition-opacity w-12 h-12" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+                </svg>
+              </div>
             </div>
           ))}
         </div>
@@ -376,16 +400,10 @@ export default function Home() {
       {/* Wedding Events Section - Reorganized Layout */}
       <section className="section-container bg-cream-50 reveal">
         <div className="max-w-4xl mx-auto">
-          
-          {/* Invitation Text - Above Calendar */}
-          <div className="text-center mb-12">
-            <h2 className="font-display text-5xl md:text-6xl text-rose-400 mb-4">Thân mời</h2>
-            <p className="font-sans text-base md:text-lg text-gray-500 uppercase tracking-widest">ĐẾN DỰ LỄ CƯỚI CỦA CHÚNG MÌNH</p>
-          </div>
 
           {/* Calendar Section */}
           <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl text-gray-300 mb-8">Tháng 4</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-8">Tháng 4</h2>
             
             {/* Calendar */}
             <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm max-w-2xl mx-auto">
@@ -424,6 +442,7 @@ export default function Home() {
                           width={50}
                           height={50}
                           className="w-full h-full object-contain opacity-30 animate-heartbeat"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -640,6 +659,7 @@ export default function Home() {
                 alt="QR chuyển khoản chú rể"
                 fill
                 className="object-contain p-2"
+                loading="lazy"
               />
             </div>
             <p className="font-sans text-xs text-gray-500 mt-3">Quét mã QR để chuyển khoản</p>
@@ -679,6 +699,7 @@ export default function Home() {
                 alt="QR chuyển khoản cô dâu"
                 fill
                 className="object-contain p-2"
+                loading="lazy"
               />
             </div>
             <p className="font-sans text-xs text-gray-500 mt-3">Quét mã QR để chuyển khoản</p>
@@ -714,17 +735,17 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Fixed Position Controls */}
-      <div className="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
+      {/* Fixed Position Controls - Optimized for mobile */}
+      <div className="fixed bottom-3 right-3 md:bottom-4 md:right-4 flex flex-col gap-2 md:gap-3 z-40">
         {/* Scroll to Top Button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`bg-gold-500 hover:bg-gold-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${
+          className={`bg-gold-500 hover:bg-gold-600 text-white p-2.5 md:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 touch-manipulation ${
             showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
           }`}
           aria-label="Scroll to top"
         >
-          <svg className="w-6 h-6 transition-transform duration-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
           </svg>
         </button>

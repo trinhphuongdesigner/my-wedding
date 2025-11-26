@@ -433,34 +433,60 @@
   - Kiểm tra hiển thị 00 khi đến ngày cưới
   - _Requirements: 13.1, 13.2, 13.3_
 
-- [ ] 36. Tối ưu responsive design cho các tính năng mới
+- [x] 36. Tối ưu responsive design cho các tính năng mới
+
+
+
+
+
   - Test lightbox trên mobile
   - Test masonry gallery trên mobile
   - Test falling animations không ảnh hưởng performance mobile
   - Test music player và scroll button không che khuất nội dung
   - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5_
 
-- [ ]* 37. Viết unit tests cho lightbox component
+- [x] 37. Viết unit tests cho lightbox component
+
+
+
+
+
+
   - Test lightbox opens với correct image
   - Test keyboard navigation
   - Test thumbnail click navigation
   - Test close functionality
   - _Requirements: 9.1-9.9_
 
-- [ ]* 38. Viết unit tests cho music player
+- [x] 38. Viết unit tests cho music player
+
+
+
+
+
+
   - Test auto-play functionality
   - Test toggle play/pause
   - Test loop functionality
   - _Requirements: 18.1, 18.2, 18.3, 18.5_
 
-- [ ]* 39. Viết unit tests cho masonry gallery
+- [x] 39. Viết unit tests cho masonry gallery
+
+
+
+
+
+
   - Test gallery layout
   - Test white borders
   - Test no border radius
   - Test zoom icon on hover
   - _Requirements: 10.1, 10.2, 10.3, 10.4_
 
-- [ ] 40. Manual testing và refinement cho tính năng mới
+- [x] 40. Manual testing và refinement cho tính năng mới
+
+
+
   - Test lightbox trên các browsers
   - Test animations performance
   - Test music player trên các devices
@@ -468,7 +494,12 @@
   - Điều chỉnh nếu cần
   - _Requirements: All new requirements_
 
-- [ ] 41. Final review và deployment preparation
+- [x] 41. Final review và deployment preparation
+
+
+
+
+
   - Review tất cả changes
   - Đảm bảo tất cả tests pass
   - Optimize images nếu cần

@@ -14,27 +14,38 @@ import Home from '../page';
 // Mock Date to control time in tests
 let mockTime: number;
 
+const RealDate = Date;
+
 const mockDate = (dateString: string) => {
-  mockTime = new Date(dateString).getTime();
+  mockTime = new RealDate(dateString).getTime();
   jest.spyOn(global.Date, 'now').mockImplementation(() => mockTime);
-  jest.spyOn(global, 'Date').mockImplementation(((...args: any[]) => {
-    if (args.length === 0) {
-      return { getTime: () => mockTime } as any;
+  global.Date = class extends RealDate {
+    constructor(...args: any[]) {
+      if (args.length === 0) {
+        super(mockTime);
+      } else {
+        super(...args);
+      }
     }
-    return new (Date as any)(...args);
-  }) as any);
+    static now() {
+      return mockTime;
+    }
+  } as any;
 };
 
 const restoreDate = () => {
+  global.Date = RealDate;
   jest.restoreAllMocks();
 };
 
 describe('Countdown Timer - Requirements 13.1, 13.2, 13.3', () => {
   beforeEach(() => {
+    jest.clearAllTimers();
     jest.useFakeTimers();
   });
 
   afterEach(() => {
+    jest.clearAllTimers();
     jest.runOnlyPendingTimers();
     jest.useRealTimers();
     restoreDate();
@@ -307,6 +318,7 @@ describe('Countdown Timer - Requirements 13.1, 13.2, 13.3', () => {
 
     it('should format single digit values with leading zero', async () => {
       // Set time to have single digit values
+      // Wedding is at 11:45:00, so 11:40:05 means 4 minutes 55 seconds remaining
       mockDate('2026-04-04T11:40:05');
       
       render(<Home />);
@@ -315,10 +327,10 @@ describe('Countdown Timer - Requirements 13.1, 13.2, 13.3', () => {
         const minutesElement = document.getElementById('minutes');
         const secondsElement = document.getElementById('seconds');
         
-        // 5 minutes should be displayed as "05"
-        expect(minutesElement?.textContent).toBe('05');
-        // 5 seconds should be displayed as "05"
-        expect(secondsElement?.textContent).toBe('05');
+        // 4 minutes should be displayed as "04"
+        expect(minutesElement?.textContent).toBe('04');
+        // 55 seconds should be displayed as "55"
+        expect(secondsElement?.textContent).toBe('55');
       });
     });
   });

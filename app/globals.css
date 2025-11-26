@@ -96,6 +96,22 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Hide scrollbar for mobile lightbox thumbnails */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Improve touch targets on mobile */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 /* Custom animations */
@@ -223,6 +239,48 @@
   width: 24px;
   height: 24px;
   display: block;
+}
+
+/* Reduce animation complexity on mobile for better performance */
+@media (max-width: 768px) {
+  .falling-heart {
+    font-size: 1.2rem;
+  }
+  
+  .falling-petal {
+    font-size: 1rem;
+  }
+  
+  .falling-petal svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Simplify animations on mobile */
+  @keyframes fallHeart {
+    0% {
+      transform: translateY(-10vh) rotate(0deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(110vh) rotate(180deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fallPetal {
+    0% {
+      transform: translateY(-10vh) translateX(0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(50vh) translateX(10px);
+    }
+    100% {
+      transform: translateY(110vh) translateX(0);
+      opacity: 0;
+    }
+  }
 }
 
 /* Heart burst effect on click */

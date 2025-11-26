@@ -14,8 +14,8 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
   describe('7.1 - Vietnamese Content Preservation', () => {
     it('should preserve hero section Vietnamese text', () => {
       render(<Home />);
-      expect(screen.getByText('Thân mời')).toBeInTheDocument();
-      expect(screen.getByText('ĐẾN DỰ LỄ CƯỚI CỦA CHÚNG MÌNH')).toBeInTheDocument();
+      expect(screen.getAllByText('Thân mời').length).toBeGreaterThanOrEqual(1);
+      expect(screen.getAllByText('ĐẾN DỰ LỄ CƯỚI CỦA CHÚNG MÌNH').length).toBeGreaterThanOrEqual(1);
     });
 
     it('should preserve couple names in Vietnamese', () => {
@@ -34,8 +34,8 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
 
     it('should preserve event titles in Vietnamese', () => {
       render(<Home />);
-      expect(screen.getByText('LỄ VU QUY')).toBeInTheDocument();
-      expect(screen.getByText('LỄ TÂN HÔN')).toBeInTheDocument();
+      expect(screen.getByText(/TIỆC THÂN MẬT NHÀ GÁI/)).toBeInTheDocument();
+      expect(screen.getByText(/TIỆC THÂN MẬT NHÀ TRAI/)).toBeInTheDocument();
     });
 
     it('should preserve love story titles in Vietnamese', () => {
@@ -74,14 +74,14 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
   describe('7.2 - Date, Time, and Location Information Preservation', () => {
     it('should preserve Vu Quy event date and time', () => {
       render(<Home />);
-      expect(screen.getByText('VÀO LÚC 11 GIỜ 45 PHÚT')).toBeInTheDocument();
+      expect(screen.getByText(/VÀO LÚC 11 GIỜ 45 PHÚT/)).toBeInTheDocument();
       expect(screen.getByText(/17 tháng 2 năm Bính Ngọ âm lịch/)).toBeInTheDocument();
     });
 
     it('should preserve Tan Hon event date and time', () => {
       render(<Home />);
-      expect(screen.getByText('VÀO LÚC 11 GIỜ 00 PHÚT')).toBeInTheDocument();
-      expect(screen.getByText(/20 tháng 2 năm Bính Ngọ âm lịch/)).toBeInTheDocument();
+      expect(screen.getByText(/VÀO LÚC 11 GIỜ 00 PHÚT/)).toBeInTheDocument();
+      expect(screen.getByText(/24 tháng 3 năm Bính Ngọ âm lịch/)).toBeInTheDocument();
     });
 
     it('should preserve Vu Quy location', () => {
@@ -96,8 +96,8 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
 
     it('should preserve venue name', () => {
       render(<Home />);
-      const venueElements = screen.getAllByText(/GRAND PALACE/);
-      expect(venueElements.length).toBeGreaterThanOrEqual(2); // Should appear for both events
+      expect(screen.getByText(/TƯ GIA NHÀ GÁI/)).toBeInTheDocument();
+      expect(screen.getByText(/TƯ GIA NHÀ TRAI/)).toBeInTheDocument();
     });
 
     it('should preserve love story dates', () => {
@@ -122,7 +122,8 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
   describe('7.3 - Section Structure Preservation', () => {
     it('should have Hero section', () => {
       render(<Home />);
-      const heroSection = screen.getByText('Thân mời').closest('section');
+      const heroElements = screen.getAllByText('Thân mời');
+      const heroSection = heroElements[0].closest('section');
       expect(heroSection).toBeInTheDocument();
     });
 
@@ -134,7 +135,7 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
 
     it('should have Wedding Events section', () => {
       render(<Home />);
-      const eventsSection = screen.getByText('LỄ VU QUY').closest('section');
+      const eventsSection = screen.getByText(/TIỆC THÂN MẬT NHÀ GÁI/).closest('section');
       expect(eventsSection).toBeInTheDocument();
     });
 
@@ -147,7 +148,7 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
 
     it('should have Love Story section', () => {
       render(<Home />);
-      expect(screen.getByText('Câu Chuyện Của Chúng Mình')).toBeInTheDocument();
+      expect(screen.getByText('Câu Chuyện Tình Yêu')).toBeInTheDocument();
     });
 
     it('should have Countdown section', () => {
@@ -222,10 +223,10 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
   });
 
   describe('Additional Content Integrity Checks', () => {
-    it('should preserve role labels', () => {
+    it('should not have role labels (removed per Requirement 12.3)', () => {
       render(<Home />);
-      expect(screen.getByText('The Groom')).toBeInTheDocument();
-      expect(screen.getByText('The Bride')).toBeInTheDocument();
+      expect(screen.queryByText('The Groom')).not.toBeInTheDocument();
+      expect(screen.queryByText('The Bride')).not.toBeInTheDocument();
     });
 
     it('should preserve love story content', () => {

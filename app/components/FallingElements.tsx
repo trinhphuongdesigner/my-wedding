@@ -14,8 +14,15 @@ export default function FallingElements() {
   const [elements, setElements] = useState<FallingElement[]>([]);
 
   useEffect(() => {
-    // Generate hearts (reduced by 30%: 8 -> 6)
-    const hearts: FallingElement[] = Array.from({ length: 6 }, (_, i) => ({
+    // Detect if mobile device for performance optimization
+    const isMobile = window.innerWidth < 768;
+    
+    // Reduce elements on mobile: hearts 6 -> 3, petals 21 -> 10
+    const heartCount = isMobile ? 3 : 6;
+    const petalCount = isMobile ? 10 : 21;
+    
+    // Generate hearts
+    const hearts: FallingElement[] = Array.from({ length: heartCount }, (_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
       animationDelay: `${Math.random() * 3}s`,
@@ -23,8 +30,8 @@ export default function FallingElements() {
       type: 'heart' as const
     }));
 
-    // Generate cherry blossom petals (reduced by 30%: 30 -> 21)
-    const petals: FallingElement[] = Array.from({ length: 21 }, (_, i) => ({
+    // Generate cherry blossom petals
+    const petals: FallingElement[] = Array.from({ length: petalCount }, (_, i) => ({
       id: i + 10,
       left: `${Math.random() * 100}%`,
       animationDelay: `${Math.random() * 5}s`,
