@@ -359,7 +359,12 @@
   - Đảm bảo pointer-events-none để không ảnh hưởng interactions
   - _Requirements: 16.1, 16.2, 16.3, 16.4_
 
-- [ ] 30. Implement Background Music Player
+- [x] 30. Implement Background Music Player
+
+
+
+
+
 
 
 
@@ -370,26 +375,45 @@
   - Style button: fixed bottom-4 right-4, bg-rose-500
   - _Requirements: 18.1, 18.2, 18.3, 18.5_
 
-- [ ] 31. Cập nhật README.md với hướng dẫn thay nhạc
+- [x] 31. Cập nhật README.md với hướng dẫn thay nhạc
+
+
+
+
   - Thêm section "Thay đổi nhạc nền"
   - Hướng dẫn sử dụng file offline
   - Hướng dẫn sử dụng link online
   - _Requirements: 18.4_
 
-- [ ] 32. Implement Fixed Position Controls layout
+- [x] 32. Implement Fixed Position Controls layout
+
+
+
+
+
   - Tạo container flex flex-col gap-3 cho cả hai buttons
   - Đặt scroll to top button phía trên
   - Đặt music control button phía dưới
   - Thêm hover:scale-110 transition cho cả hai buttons
   - _Requirements: 19.1, 19.2, 19.3, 19.4_
 
-- [ ] 33. Cập nhật Google Maps links
+- [x] 33. Cập nhật Google Maps links
+
+
+
+
+
   - Cập nhật link Vu Quy: https://maps.app.goo.gl/5nGBPV6fn27ouonG8
   - Cập nhật link Tân Hôn: https://maps.app.goo.gl/XEVbDMVyagu8itUZ6
   - Đảm bảo target="_blank" và rel="noopener noreferrer"
   - _Requirements: 17.1, 17.2, 17.3_
 
-- [ ] 34. Thêm smooth transitions cho tất cả interactive elements
+- [x] 34. Thêm smooth transitions cho tất cả interactive elements
+
+
+
+
+
   - Thêm transition classes cho buttons
   - Thêm transition classes cho icons
   - Thêm transition classes cho images
@@ -398,7 +422,12 @@
   - Verify tất cả hover effects mượt mà
   - _Requirements: 15.1, 15.2, 15.3, 15.4_
 
-- [ ] 35. Verify countdown timer hoạt động
+- [x] 35. Verify countdown timer hoạt động
+
+
+
+
+
   - Kiểm tra countdown đang tính toán đúng
   - Kiểm tra cập nhật mỗi giây
   - Kiểm tra hiển thị 00 khi đến ngày cưới

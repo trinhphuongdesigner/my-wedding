@@ -179,7 +179,7 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
     it('should preserve Google Maps links for Vu Quy venue', () => {
       render(<Home />);
       const vuQuyLink = screen.getAllByText('CHỈ ĐƯỜNG')[0];
-      expect(vuQuyLink.closest('a')).toHaveAttribute('href', 'https://maps.app.goo.gl/GrandPalaceQuangNam');
+      expect(vuQuyLink.closest('a')).toHaveAttribute('href', 'https://maps.app.goo.gl/5nGBPV6fn27ouonG8');
       expect(vuQuyLink.closest('a')).toHaveAttribute('target', '_blank');
       expect(vuQuyLink.closest('a')).toHaveAttribute('rel', 'noopener noreferrer');
     });
@@ -187,7 +187,7 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
     it('should preserve Google Maps links for Tan Hon venue', () => {
       render(<Home />);
       const tanHonLink = screen.getAllByText('CHỈ ĐƯỜNG')[1];
-      expect(tanHonLink.closest('a')).toHaveAttribute('href', 'https://maps.app.goo.gl/GrandPalaceGiaLai');
+      expect(tanHonLink.closest('a')).toHaveAttribute('href', 'https://maps.app.goo.gl/XEVbDMVyagu8itUZ6');
       expect(tanHonLink.closest('a')).toHaveAttribute('target', '_blank');
       expect(tanHonLink.closest('a')).toHaveAttribute('rel', 'noopener noreferrer');
     });

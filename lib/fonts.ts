@@ -1,28 +1,28 @@
-import { Great_Vibes, Playfair_Display, Montserrat } from 'next/font/google'
 import localFont from 'next/font/local'
 
 // Font loaders must be called at module scope
-const greatVibesFont = Great_Vibes({ 
-  weight: '400',
-  subsets: ['latin', 'vietnamese'],
+// Title font - Great Vibes
+const greatVibesFont = localFont({
+  src: '../public/fonts/GreatVibes-Regular.ttf',
   variable: '--font-display',
   display: 'swap',
 })
 
-const playfairDisplayFont = Playfair_Display({ 
-  weight: ['400', '600', '700'],
-  subsets: ['latin', 'vietnamese'],
-  variable: '--font-serif',
+// Names font - UVF Verner
+const uvfVernerFont = localFont({
+  src: '../public/fonts/UVF Verner.ttf',
+  variable: '--font-names',
   display: 'swap',
 })
 
-const montserratFont = Montserrat({ 
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin', 'vietnamese'],
+// Content font - Quicksand
+const quicksandFont = localFont({
+  src: '../public/fonts/Quicksand-VariableFont_wght.ttf',
   variable: '--font-sans',
   display: 'swap',
 })
 
+// Calendar/Event font - iCiel Rift Regular
 const icielRiftFont = localFont({
   src: '../public/fonts/ICIEL-Rift-Regular.otf',
   variable: '--font-event',
@@ -35,13 +35,13 @@ export const FONT_CONFIG = {
     name: 'Great Vibes',
     font: greatVibesFont
   },
-  serif: {
-    name: 'Playfair Display',
-    font: playfairDisplayFont
+  names: {
+    name: 'UVF Verner',
+    font: uvfVernerFont
   },
   sans: {
-    name: 'Montserrat',
-    font: montserratFont
+    name: 'Quicksand',
+    font: quicksandFont
   },
   event: {
     name: 'iCiel Rift Regular',
@@ -51,6 +51,6 @@ export const FONT_CONFIG = {
 
 // Export for easy access
 export const displayFont = FONT_CONFIG.display.font
-export const serifFont = FONT_CONFIG.serif.font
+export const namesFont = FONT_CONFIG.names.font
 export const sansFont = FONT_CONFIG.sans.font
 export const eventFont = FONT_CONFIG.event.font

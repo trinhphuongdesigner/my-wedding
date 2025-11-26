@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { displayFont, serifFont, sansFont, eventFont } from '@/lib/fonts'
+import { displayFont, namesFont, sansFont, eventFont } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi" className={`${displayFont.variable} ${serifFont.variable} ${sansFont.variable} ${eventFont.variable}`}>
+    <html lang="vi" className={`${displayFont.variable} ${namesFont.variable} ${sansFont.variable} ${eventFont.variable}`}>
       <body>{children}</body>
     </html>
   )

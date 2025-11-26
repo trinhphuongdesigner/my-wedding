@@ -141,6 +141,85 @@ Thêm link Facebook và Instagram vào footer:
 <a href="#" className="...">  // Thay # bằng link của bạn
 ```
 
+## 🎵 Thay Đổi Nhạc Nền
+
+Website hỗ trợ phát nhạc nền tự động khi người dùng truy cập. Bạn có thể thay đổi nhạc nền theo 2 cách:
+
+### Cách 1: Sử dụng File Nhạc Offline (Khuyến nghị)
+
+1. **Chuẩn bị file nhạc**
+   - Định dạng hỗ trợ: MP3, WAV, OGG
+   - Khuyến nghị: MP3 với bitrate 128-192kbps để tối ưu dung lượng
+   - Đặt tên file: `wedding-song.mp3` (hoặc tên bạn muốn)
+
+2. **Upload file nhạc**
+   - Đặt file nhạc vào thư mục `public/music/`
+   - Ví dụ: `public/music/wedding-song.mp3`
+
+3. **Cập nhật code**
+   - Mở file `app/components/MusicPlayer.tsx`
+   - Tìm dòng:
+   ```typescript
+   <audio ref={audioRef} loop>
+     <source src="/music/wedding-song.mp3" type="audio/mpeg" />
+   </audio>
+   ```
+   - Thay đổi đường dẫn `/music/wedding-song.mp3` thành tên file của bạn
+
+**Ưu điểm:**
+- ✅ Tốc độ load nhanh
+- ✅ Không phụ thuộc vào dịch vụ bên ngoài
+- ✅ Hoạt động ổn định
+
+**Lưu ý:**
+- File nhạc sẽ được deploy cùng website
+- Nên compress file nhạc để giảm dung lượng (khuyến nghị < 5MB)
+
+### Cách 2: Sử dụng Link Nhạc Online
+
+1. **Upload nhạc lên hosting**
+   - Sử dụng dịch vụ như Google Drive, Dropbox, hoặc hosting riêng
+   - Lấy direct link đến file nhạc (phải là link trực tiếp, không phải link xem)
+
+2. **Cập nhật code**
+   - Mở file `app/components/MusicPlayer.tsx`
+   - Tìm dòng:
+   ```typescript
+   <audio ref={audioRef} loop>
+     <source src="/music/wedding-song.mp3" type="audio/mpeg" />
+   </audio>
+   ```
+   - Thay đổi thành:
+   ```typescript
+   <audio ref={audioRef} loop>
+     <source src="https://your-hosting.com/path/to/song.mp3" type="audio/mpeg" />
+   </audio>
+   ```
+
+**Ưu điểm:**
+- ✅ Không tăng dung lượng website
+- ✅ Dễ thay đổi nhạc mà không cần redeploy
+
+**Nhược điểm:**
+- ⚠️ Phụ thuộc vào dịch vụ hosting bên ngoài
+- ⚠️ Có thể bị chậm nếu hosting không tốt
+- ⚠️ Link có thể hết hạn hoặc bị xóa
+
+### Lưu Ý Quan Trọng
+
+- 🔊 **Auto-play**: Một số trình duyệt chặn auto-play nhạc. Người dùng có thể cần click vào icon nhạc để bật.
+- 📱 **Mobile**: Trên mobile, auto-play thường bị chặn. Người dùng cần tương tác với trang trước.
+- 🎼 **Bản quyền**: Đảm bảo bạn có quyền sử dụng nhạc trên website.
+- 🔁 **Loop**: Nhạc sẽ tự động lặp lại khi kết thúc.
+
+### Tắt Nhạc Nền
+
+Nếu bạn không muốn có nhạc nền, xóa hoặc comment component `<MusicPlayer />` trong file `app/page.tsx`:
+
+```typescript
+{/* <MusicPlayer /> */}
+```
+
 ## 🎨 Tùy Chỉnh Màu Sắc
 
 Mở `tailwind.config.js` để thay đổi bảng màu:
