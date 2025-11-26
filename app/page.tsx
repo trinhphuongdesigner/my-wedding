@@ -484,6 +484,9 @@ export default function Home() {
 
       {/* Photo Gallery Section - Optimized for mobile */}
       <section className="section-container-centered reveal bg-white">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">Album Hình Cưới Của Tụi Mình</h2>
+        </div>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-3 md:gap-4 max-w-6xl mx-auto mb-16">
           {[
             { index: 1, height: 600 },
@@ -533,7 +536,7 @@ export default function Home() {
 
           {/* Calendar Section */}
           <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-8">Tháng 4</h2>
+            <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-8">Tiệc mừng tháng 4</h2>
             
             {/* Calendar */}
             <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm max-w-2xl mx-auto">
