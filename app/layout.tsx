@@ -3,10 +3,10 @@ import { displayFont, namesFont, sansFont, eventFont } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Đám Cưới Của Chúng Mình',
+  title: 'Đám Cưới Của Phương Hiền & Trịnh Phương',
   description: 'Chúng mình sắp kết hôn! Hân hạnh được đón tiếp quý khách.',
   openGraph: {
-    title: 'Đám Cưới Của Chúng Mình',
+    title: 'Đám Cưới Của Phương Hiền & Trịnh Phương',
     description: 'Chúng mình sắp kết hôn! Hân hạnh được đón tiếp quý khách.',
     type: 'website',
   },

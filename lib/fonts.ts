@@ -15,9 +15,9 @@ const uvfVernerFont = localFont({
   display: 'swap',
 })
 
-// Content font - Quicksand
-const quicksandFont = localFont({
-  src: '../public/fonts/Quicksand-VariableFont_wght.ttf',
+// Content font - VL AmpleSoft
+const ampleSoftFont = localFont({
+  src: '../public/fonts/VL_AmpleSoft.otf',
   variable: '--font-sans',
   display: 'swap',
 })
@@ -40,8 +40,8 @@ export const FONT_CONFIG = {
     font: uvfVernerFont
   },
   sans: {
-    name: 'Quicksand',
-    font: quicksandFont
+    name: 'VL AmpleSoft',
+    font: ampleSoftFont
   },
   event: {
     name: 'iCiel Rift Regular',

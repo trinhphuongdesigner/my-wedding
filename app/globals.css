@@ -22,6 +22,29 @@
   
   html {
     scroll-behavior: smooth;
+    /* Base font size - mobile (default) */
+    font-size: 16px;
+  }
+
+  /* Tablet - increase font size slightly */
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
+  }
+
+  /* Desktop - increase font size more */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  /* Large desktop - maximum font size */
+  @media (min-width: 1536px) {
+    html {
+      font-size: 19px;
+    }
   }
 
   /* Base typography styles */

@@ -591,7 +591,7 @@ export default function Home() {
 
       {/* Countdown */}
       <section className="section-container-centered bg-white text-center reveal">
-        <h2 className="font-serif text-2xl md:text-3xl text-gray-700 mb-4">Đếm Ngược Đến Ngày Trọng Đại</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">Đếm Ngược Đến Ngày Trọng Đại</h2>
         <div className="w-16 h-px bg-gold-400 mx-auto mb-12"></div>
 
         <div className="grid grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto">
@@ -617,7 +617,7 @@ export default function Home() {
       {/* Bank Account Section */}
       <section className="section-container-centered bg-cream-50 reveal">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-2xl md:text-3xl text-gray-700 mb-4">Mừng Cưới</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">Mừng Cưới</h2>
           <div className="w-16 h-px bg-gold-400 mx-auto mb-4"></div>
           <p className="font-sans text-sm md:text-base text-gray-600">
             Thay lời cảm ơn sâu sắc, chúng mình xin trân trọng gửi đến quý khách
