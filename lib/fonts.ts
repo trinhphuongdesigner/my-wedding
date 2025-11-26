@@ -1,9 +1,9 @@
 import localFont from 'next/font/local'
 
 // Font loaders must be called at module scope
-// Title font - Great Vibes
-const greatVibesFont = localFont({
-  src: '../public/fonts/GreatVibes-Regular.ttf',
+// Title font - SVN Buinton
+const svnBuintonFont = localFont({
+  src: '../public/fonts/SVN-Buinton.otf',
   variable: '--font-display',
   display: 'swap',
 })
@@ -32,8 +32,8 @@ const icielRiftFont = localFont({
 // Font configuration object
 export const FONT_CONFIG = {
   display: {
-    name: 'Great Vibes',
-    font: greatVibesFont
+    name: 'SVN Buinton',
+    font: svnBuintonFont
   },
   names: {
     name: 'UVF Verner',
