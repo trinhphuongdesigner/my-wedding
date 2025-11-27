@@ -99,7 +99,7 @@
   }
   
   .heading-script {
-    @apply font-display text-4xl md:text-5xl lg:text-6xl text-rose-400;
+    @apply font-display text-4xl md:text-5xl lg:text-6xl text-purple-600;
   }
   
   .heading-serif {
@@ -107,7 +107,7 @@
   }
   
   .divider {
-    @apply w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-rose-300 to-transparent mx-auto my-6;
+    @apply w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent mx-auto my-6;
   }
   
   .card-event {

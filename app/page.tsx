@@ -128,7 +128,7 @@ export default function Home() {
     <main className="min-h-screen bg-cream-50">
       {/* Sticky Header - Shows when scrolling */}
       <div
-        className={`fixed top-0 left-0 right-0 z-50 bg-blue-600/95 backdrop-blur-sm shadow-lg transition-transform duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-purple-600/95 backdrop-blur-sm shadow-lg transition-transform duration-300 ${
           showScrollTop ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -170,8 +170,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Blue overlay for better text contrast */}
-        <div className="absolute inset-0 bg-blue-400/40 z-10"></div>
+        {/* Purple overlay for better text contrast */}
+        <div className="absolute inset-0 bg-purple-600/40 z-10"></div>
 
         {/* Hero Image */}
         <div className="absolute inset-0">
@@ -195,7 +195,7 @@ export default function Home() {
               {[...Array(16)].map((_, i) => (
                 <div
                   key={`tl-${i}`}
-                  className="firework bg-yellow-300"
+                  className="firework bg-rose-400"
                   style={
                     {
                       top: '-80px',
@@ -214,7 +214,7 @@ export default function Home() {
               {[...Array(16)].map((_, i) => (
                 <div
                   key={`tr-${i}`}
-                  className="firework bg-pink-300"
+                  className="firework bg-pink-400"
                   style={
                     {
                       top: '-80px',
@@ -233,7 +233,7 @@ export default function Home() {
               {[...Array(16)].map((_, i) => (
                 <div
                   key={`bl-${i}`}
-                  className="firework bg-blue-300"
+                  className="firework bg-violet-400"
                   style={
                     {
                       bottom: '-80px',
@@ -252,7 +252,7 @@ export default function Home() {
               {[...Array(16)].map((_, i) => (
                 <div
                   key={`br-${i}`}
-                  className="firework bg-purple-300"
+                  className="firework bg-slate-400"
                   style={
                     {
                       bottom: '-80px',
@@ -271,7 +271,7 @@ export default function Home() {
               {[...Array(12)].map((_, i) => (
                 <div
                   key={`ct-${i}`}
-                  className="firework bg-red-300"
+                  className="firework bg-rose-400"
                   style={
                     {
                       top: '-100px',
@@ -290,7 +290,7 @@ export default function Home() {
               {[...Array(12)].map((_, i) => (
                 <div
                   key={`cb-${i}`}
-                  className="firework bg-green-300"
+                  className="firework bg-pink-400"
                   style={
                     {
                       bottom: '-100px',
@@ -306,8 +306,8 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Blue box behind couple names with tilt animation */}
-            <div className="bg-blue-600/90 px-6 md:px-10 lg:px-12 py-4 md:py-6 mb-4 md:mb-6 animate-fade-in-up animate-tilt">
+            {/* Purple box behind couple names with tilt animation */}
+            <div className="bg-purple-600/90 px-6 md:px-10 lg:px-12 py-4 md:py-6 mb-4 md:mb-6 animate-fade-in-up animate-tilt">
               <div className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white">
                 Phương & Hiền
               </div>
@@ -355,7 +355,7 @@ export default function Home() {
       {/* Couple Introduction */}
       <section className="section-container-centered bg-white reveal">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-purple-600 mb-4">
             Chúng Mình Là
           </h2>
         </div>
@@ -374,13 +374,13 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <h3 className="font-names text-2xl md:text-3xl mb-3 text-gray-700">
+            <h3 className="font-names text-2xl md:text-3xl mb-3 text-rose-500">
               Đình Phương
             </h3>
-            <p className="font-sans text-sm md:text-base text-gray-600 leading-relaxed max-w-sm mx-auto">
-              Con ông: Trịnh Đình Bình
+            <p className="font-sans text-sm md:text-base text-gray-700 leading-relaxed max-w-sm mx-auto">
+              Con ông: <span className="font-medium text-gray-800">Trịnh Đình Bình</span>
               <br />
-              Con bà: Đinh Thị Thơm
+              Con bà: <span className="font-medium text-gray-800">Đinh Thị Thơm</span>
             </p>
           </div>
 
@@ -397,13 +397,13 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
-            <h3 className="font-names text-2xl md:text-3xl mb-3 text-gray-700">
+            <h3 className="font-names text-2xl md:text-3xl mb-3 text-pink-500">
               Phương Hiền
             </h3>
-            <p className="font-sans text-sm md:text-base text-gray-600 leading-relaxed max-w-sm mx-auto">
-              Con ông: Trần Văn Phú
+            <p className="font-sans text-sm md:text-base text-gray-700 leading-relaxed max-w-sm mx-auto">
+              Con ông: <span className="font-medium text-gray-800">Trần Văn Phú</span>
               <br />
-              Con bà: Đỗ Thị Thanh Liêm
+              Con bà: <span className="font-medium text-gray-800">Đỗ Thị Thanh Liêm</span>
             </p>
           </div>
         </div>
@@ -412,7 +412,7 @@ export default function Home() {
       {/* Love Story - MOVED BEFORE CALENDAR */}
       <section className="section-container-centered bg-cream-50 reveal">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-purple-600 mb-4">
             Câu Chuyện Tình Yêu
           </h2>
         </div>
@@ -425,11 +425,11 @@ export default function Home() {
             {/* Story Item 1 */}
             <div className="mb-12 flex items-center reveal">
               <div className="w-1/2 pr-8 text-right">
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <h3 className="font-sans text-base md:text-lg mb-2 text-gray-700 font-semibold">
+                <div className="bg-white p-6 rounded-lg border-2 border-rose-200">
+                  <h3 className="font-sans text-base md:text-lg mb-2 text-rose-600 font-semibold">
                     Lần Đầu Gặp Gỡ
                   </h3>
-                  <p className="font-sans text-xs md:text-sm text-gray-500 mb-2">
+                  <p className="font-sans text-xs md:text-sm text-rose-500 mb-2">
                     Cuối xuân năm 2025
                   </p>
                   <p className="font-sans text-xs md:text-sm text-gray-600">
@@ -454,13 +454,13 @@ export default function Home() {
             {/* Story Item 2 */}
             <div className="mb-12 flex items-center reveal">
               <div className="w-1/2 pr-8"></div>
-              <div className="w-3 h-3 bg-blue-400 rounded-full border-4 border-white z-10"></div>
+              <div className="w-3 h-3 bg-pink-400 rounded-full border-4 border-white z-10"></div>
               <div className="w-1/2 pl-8">
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <h3 className="font-sans text-base md:text-lg mb-2 text-gray-700 font-semibold">
+                <div className="bg-white p-6 rounded-lg border-2 border-pink-200">
+                  <h3 className="font-sans text-base md:text-lg mb-2 text-pink-600 font-semibold">
                     Ngày Kỷ Niệm
                   </h3>
-                  <p className="font-sans text-xs md:text-sm text-gray-500 mb-2">
+                  <p className="font-sans text-xs md:text-sm text-pink-500 mb-2">
                     30/03/2025
                   </p>
                   <p className="font-sans text-xs md:text-sm text-gray-600">
@@ -495,11 +495,11 @@ export default function Home() {
             {/* Story Item 3 */}
             <div className="mb-12 flex items-center reveal">
               <div className="w-1/2 pr-8 text-right">
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <h3 className="font-sans text-base md:text-lg mb-2 text-gray-700 font-semibold">
+                <div className="bg-white p-6 rounded-lg border-2 border-violet-200">
+                  <h3 className="font-sans text-base md:text-lg mb-2 text-violet-600 font-semibold">
                     Lời Cầu Hôn💍✨
                   </h3>
-                  <p className="font-sans text-xs md:text-sm text-gray-500 mb-2">
+                  <p className="font-sans text-xs md:text-sm text-violet-500 mb-2">
                     Sinh nhật lần thứ 27 của em
                   </p>
                   <p className="font-sans text-xs md:text-sm text-gray-600">
@@ -534,20 +534,20 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="w-3 h-3 bg-gold-400 rounded-full border-4 border-white z-10"></div>
+              <div className="w-3 h-3 bg-violet-400 rounded-full border-4 border-white z-10"></div>
               <div className="w-1/2 pl-8"></div>
             </div>
 
             {/* Story Item 4 */}
             <div className="flex items-center reveal">
               <div className="w-1/2 pr-8"></div>
-              <div className="w-3 h-3 bg-gradient-to-br from-rose-400 to-blue-400 rounded-full border-4 border-white z-10"></div>
+              <div className="w-3 h-3 bg-gradient-to-br from-rose-400 to-slate-400 rounded-full border-4 border-white z-10"></div>
               <div className="w-1/2 pl-8">
-                <div className="bg-white p-6 rounded-lg border border-gray-200">
-                  <h3 className="font-sans text-base md:text-lg mb-2 text-gray-700 font-semibold">
+                <div className="bg-white p-6 rounded-lg border-2 border-slate-200">
+                  <h3 className="font-sans text-base md:text-lg mb-2 text-slate-600 font-semibold">
                     Đám Cưới💕
                   </h3>
-                  <p className="font-sans text-xs md:text-sm text-gray-500 mb-2">
+                  <p className="font-sans text-xs md:text-sm text-slate-500 mb-2">
                     04/04/2026
                   </p>
                   <p className="font-sans text-xs md:text-sm text-gray-600">
@@ -645,7 +645,7 @@ export default function Home() {
       {/* Photo Gallery Section - Optimized for mobile */}
       <section className="section-container-centered reveal bg-white">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-purple-600 mb-4">
             Album Hình Cưới Của Tụi Mình
           </h2>
         </div>
@@ -773,60 +773,60 @@ export default function Home() {
 
           {/* Event 1: LỄ VU QUY NHÀ GÁI - 4/4/2026 */}
           <div className="mb-12">
-            <p className="font-event text-gray-400 text-sm md:text-base text-center mb-6 tracking-widest">
+            <p className="font-event text-rose-400 text-sm md:text-base text-center mb-6 tracking-widest">
               LỄ VU QUY NHÀ GÁI ĐƯỢC TỔ CHỨC
               <br />
               VÀO LÚC 11 GIỜ 45 PHÚT
             </p>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm">
+            <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm border-2 border-rose-100">
               {/* Date Display - THÁNG | THỨ BẢY | NĂM */}
               <div className="flex items-center justify-center gap-6 md:gap-12 mb-8">
                 <div className="text-center">
-                  <div className="font-event text-gray-400 text-sm md:text-base mb-2 tracking-widest">
+                  <div className="font-event text-rose-400 text-sm md:text-base mb-2 tracking-widest">
                     THÁNG
                   </div>
-                  <div className="font-event text-6xl md:text-7xl text-gray-300">
+                  <div className="font-event text-6xl md:text-7xl text-rose-400">
                     4
                   </div>
                 </div>
 
-                <div className="h-20 md:h-24 w-px bg-gray-200"></div>
+                <div className="h-20 md:h-24 w-px bg-rose-200"></div>
 
                 <div className="text-center">
-                  <div className="font-event text-gray-400 text-sm md:text-base mb-2 tracking-widest">
+                  <div className="font-event text-rose-400 text-sm md:text-base mb-2 tracking-widest">
                     THỨ BẢY
                   </div>
-                  <div className="font-event text-6xl md:text-7xl text-gray-300">
+                  <div className="font-event text-6xl md:text-7xl text-rose-400">
                     4
                   </div>
                 </div>
 
-                <div className="h-20 md:h-24 w-px bg-gray-200"></div>
+                <div className="h-20 md:h-24 w-px bg-rose-200"></div>
 
                 <div className="text-center">
-                  <div className="font-event text-gray-400 text-sm md:text-base mb-2 tracking-widest">
+                  <div className="font-event text-rose-400 text-sm md:text-base mb-2 tracking-widest">
                     NĂM
                   </div>
-                  <div className="font-event text-6xl md:text-7xl text-gray-300">
+                  <div className="font-event text-6xl md:text-7xl text-rose-400">
                     2026
                   </div>
                 </div>
               </div>
 
               {/* Lunar Date */}
-              <p className="text-center font-sans text-sm md:text-base text-gray-500 mb-8">
+              <p className="text-center font-sans text-sm md:text-base text-rose-400 mb-8">
                 (Tức ngày 17 tháng 2 năm Bính Ngọ âm lịch)
               </p>
 
               {/* Venue Title */}
-              <h3 className="text-center font-event text-xl md:text-2xl text-gray-400 tracking-widest mb-6">
+              <h3 className="text-center font-event text-xl md:text-2xl text-rose-400 tracking-widest mb-6">
                 TẠI TƯ GIA NHÀ GÁI
               </h3>
 
               {/* Address */}
-              <p className="text-center font-sans text-base md:text-lg text-gray-600 leading-relaxed mb-8 px-4">
-                Địa chỉ: 56 Phạm Phú Thứ, Vĩnh Điện, Quảng Nam
+              <p className="text-center font-sans text-base md:text-lg leading-relaxed mb-8 px-4">
+                <span className="text-rose-400">Địa chỉ:</span> <span className="font-medium text-rose-400">56 Phạm Phú Thứ, Vĩnh Điện, Quảng Nam</span>
               </p>
 
               {/* Direction Button */}
@@ -835,7 +835,7 @@ export default function Home() {
                   href="https://maps.app.goo.gl/5nGBPV6fn27ouonG8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 text-gray-500 hover:text-rose-500 transition-colors duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-400 hover:bg-rose-500 text-white rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                 >
                   <svg
                     className="w-5 h-5"
@@ -849,7 +849,7 @@ export default function Home() {
                     <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                     <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
-                  <span className="font-sans text-sm md:text-base tracking-wider">
+                  <span className="font-sans text-sm md:text-base tracking-wider font-medium">
                     CHỈ ĐƯỜNG
                   </span>
                 </a>
@@ -859,60 +859,60 @@ export default function Home() {
 
           {/* Event 2: LỄ THÀNH HÔN NHÀ TRAI - 11/4/2026 */}
           <div className="mb-12">
-            <p className="font-event text-gray-400 text-sm md:text-base text-center mb-6 tracking-widest">
+            <p className="font-event text-purple-600 text-sm md:text-base text-center mb-6 tracking-widest">
               LỄ THÀNH HÔN NHÀ TRAI ĐƯỢC TỔ CHỨC
               <br />
               VÀO LÚC 11 GIỜ 00 PHÚT
             </p>
 
-            <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm">
+            <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm border-2 border-purple-100">
               {/* Date Display - THÁNG | THỨ BẢY | NĂM */}
               <div className="flex items-center justify-center gap-6 md:gap-12 mb-8">
                 <div className="text-center">
-                  <div className="font-event text-gray-400 text-sm md:text-base mb-2 tracking-widest">
+                  <div className="font-event text-purple-600 text-sm md:text-base mb-2 tracking-widest">
                     THÁNG
                   </div>
-                  <div className="font-event text-6xl md:text-7xl text-gray-300">
+                  <div className="font-event text-6xl md:text-7xl text-purple-600">
                     4
                   </div>
                 </div>
 
-                <div className="h-20 md:h-24 w-px bg-gray-200"></div>
+                <div className="h-20 md:h-24 w-px bg-purple-200"></div>
 
                 <div className="text-center">
-                  <div className="font-event text-gray-400 text-sm md:text-base mb-2 tracking-widest">
+                  <div className="font-event text-purple-600 text-sm md:text-base mb-2 tracking-widest">
                     THỨ BẢY
                   </div>
-                  <div className="font-event text-6xl md:text-7xl text-gray-300">
+                  <div className="font-event text-6xl md:text-7xl text-purple-600">
                     11
                   </div>
                 </div>
 
-                <div className="h-20 md:h-24 w-px bg-gray-200"></div>
+                <div className="h-20 md:h-24 w-px bg-purple-200"></div>
 
                 <div className="text-center">
-                  <div className="font-event text-gray-400 text-sm md:text-base mb-2 tracking-widest">
+                  <div className="font-event text-purple-600 text-sm md:text-base mb-2 tracking-widest">
                     NĂM
                   </div>
-                  <div className="font-event text-6xl md:text-7xl text-gray-300">
+                  <div className="font-event text-6xl md:text-7xl text-purple-600">
                     2026
                   </div>
                 </div>
               </div>
 
               {/* Lunar Date */}
-              <p className="text-center font-sans text-sm md:text-base text-gray-500 mb-8">
+              <p className="text-center font-sans text-sm md:text-base text-purple-600 mb-8">
                 (Tức ngày 24 tháng 3 năm Bính Ngọ âm lịch)
               </p>
 
               {/* Venue Title */}
-              <h3 className="text-center font-event text-xl md:text-2xl text-gray-400 tracking-widest mb-6">
+              <h3 className="text-center font-event text-xl md:text-2xl text-purple-600 tracking-widest mb-6">
                 TẠI TƯ GIA NHÀ TRAI
               </h3>
 
               {/* Address */}
-              <p className="text-center font-sans text-base md:text-lg text-gray-600 leading-relaxed mb-8 px-4">
-                Địa chỉ: Tổ dân phố 3 Thị trấn Chư Ty, Đức Cơ, Gia Lai
+              <p className="text-center font-sans text-base md:text-lg leading-relaxed mb-8 px-4">
+                <span className="text-purple-600">Địa chỉ:</span> <span className="font-medium text-purple-600">Tổ dân phố 3 Thị trấn Chư Ty, Đức Cơ, Gia Lai</span>
               </p>
 
               {/* Direction Button */}
@@ -921,7 +921,7 @@ export default function Home() {
                   href="https://maps.app.goo.gl/XEVbDMVyagu8itUZ6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 text-gray-500 hover:text-rose-500 transition-colors duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
                 >
                   <svg
                     className="w-5 h-5"
@@ -935,7 +935,7 @@ export default function Home() {
                     <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                     <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
-                  <span className="font-sans text-sm md:text-base tracking-wider">
+                  <span className="font-sans text-sm md:text-base tracking-wider font-medium">
                     CHỈ ĐƯỜNG
                   </span>
                 </a>
@@ -947,10 +947,10 @@ export default function Home() {
 
       {/* Countdown */}
       <section className="section-container-centered bg-white text-center reveal">
-        <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">
+        <h2 className="font-display text-4xl md:text-5xl text-purple-600 mb-4">
           Đếm Ngược Đến Ngày Trọng Đại
         </h2>
-        <div className="w-16 h-px bg-gold-400 mx-auto mb-12"></div>
+        <div className="w-16 h-px bg-rose-400 mx-auto mb-12"></div>
 
         <div className="grid grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto">
           <div className="bg-cream-50 rounded-lg p-4 md:p-6 border border-gray-200">
@@ -967,7 +967,7 @@ export default function Home() {
           <div className="bg-cream-50 rounded-lg p-4 md:p-6 border border-gray-200">
             <div
               id="hours"
-              className="font-serif text-3xl md:text-4xl text-blue-400 mb-2"
+              className="font-serif text-3xl md:text-4xl text-pink-400 mb-2"
             >
               00
             </div>
@@ -978,7 +978,7 @@ export default function Home() {
           <div className="bg-cream-50 rounded-lg p-4 md:p-6 border border-gray-200">
             <div
               id="minutes"
-              className="font-serif text-3xl md:text-4xl text-gold-400 mb-2"
+              className="font-serif text-3xl md:text-4xl text-violet-400 mb-2"
             >
               00
             </div>
@@ -989,7 +989,7 @@ export default function Home() {
           <div className="bg-cream-50 rounded-lg p-4 md:p-6 border border-gray-200">
             <div
               id="seconds"
-              className="font-serif text-3xl md:text-4xl text-rose-400 mb-2"
+              className="font-serif text-3xl md:text-4xl text-slate-400 mb-2"
             >
               00
             </div>
@@ -1003,10 +1003,10 @@ export default function Home() {
       {/* Bank Account Section */}
       <section className="section-container-centered bg-cream-50 reveal">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-gray-700 mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-purple-600 mb-4">
             Mừng Cưới
           </h2>
-          <div className="w-16 h-px bg-gold-400 mx-auto mb-4"></div>
+          <div className="w-16 h-px bg-rose-400 mx-auto mb-4"></div>
           <p className="font-sans text-sm md:text-base text-gray-600">
             Thay lời cảm ơn sâu sắc, chúng mình xin trân trọng gửi đến quý khách
           </p>
@@ -1016,10 +1016,10 @@ export default function Home() {
           {/* Groom Bank Account */}
           <div className="bg-white rounded-lg border border-gray-200 p-6 md:p-8 text-center reveal">
             <div className="mb-6">
-              <h3 className="font-serif text-xl md:text-2xl mb-2 text-gray-700">
+              <h3 className="font-serif text-xl md:text-2xl mb-2 text-rose-600">
                 Chú Rể
               </h3>
-              <p className="font-serif text-lg font-medium">
+              <p className="font-serif text-lg font-medium text-gray-800">
                 Trịnh Đình Phương
               </p>
             </div>
@@ -1074,10 +1074,10 @@ export default function Home() {
           {/* Bride Bank Account */}
           <div className="bg-white rounded-lg border border-gray-200 p-6 md:p-8 text-center reveal">
             <div className="mb-6">
-              <h3 className="font-serif text-xl md:text-2xl mb-2 text-gray-700">
+              <h3 className="font-serif text-xl md:text-2xl mb-2 text-pink-600">
                 Cô Dâu
               </h3>
-              <p className="font-serif text-lg font-medium">
+              <p className="font-serif text-lg font-medium text-gray-800">
                 Trần Đỗ Phương Hiền
               </p>
             </div>
@@ -1135,7 +1135,7 @@ export default function Home() {
           <p className="font-display text-3xl md:text-4xl mb-4 text-rose-400">
             Thank You
           </p>
-          <div className="w-16 h-px bg-gold-400 mx-auto mb-6"></div>
+          <div className="w-16 h-px bg-rose-400 mx-auto mb-6"></div>
           <p className="font-sans text-sm md:text-base text-gray-600 mb-6">
             Sự hiện diện của quý khách là niềm vui và vinh hạnh cho gia đình
             chúng tôi
@@ -1181,7 +1181,7 @@ export default function Home() {
         {/* Scroll to Top Button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`bg-gold-500 hover:bg-gold-600 text-white p-2.5 md:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 touch-manipulation ${
+          className={`bg-purple-600 hover:bg-purple-700 text-white p-2.5 md:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 touch-manipulation ${
             showScrollTop
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4 pointer-events-none'
