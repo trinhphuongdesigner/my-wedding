@@ -865,8 +865,8 @@ const galleryImages = [
         <h3 className="font-display text-3xl md:text-4xl mb-3 text-rose-400">Phương Hiền</h3>
         {/* Removed "The Bride" text */}
         <p className="font-sans text-sm md:text-base text-gray-600 leading-relaxed max-w-sm mx-auto">
-          Con ông: Trần Phú<br />
-          Con bà: Đỗ Thanh Liêm
+          Con ông: Trần Văn Phú<br />
+          Con bà: Đỗ Thị Thanh Liêm
         </p>
       </div>
     </div>

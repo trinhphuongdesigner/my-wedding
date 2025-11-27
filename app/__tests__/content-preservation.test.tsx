@@ -28,14 +28,14 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
       render(<Home />);
       expect(screen.getByText(/Trịnh Đình Bình/)).toBeInTheDocument();
       expect(screen.getByText(/Đinh Thị Thơm/)).toBeInTheDocument();
-      expect(screen.getByText(/Trần Phú/)).toBeInTheDocument();
-      expect(screen.getByText(/Đỗ Thanh Liêm/)).toBeInTheDocument();
+      expect(screen.getByText(/Trần Văn Phú/)).toBeInTheDocument();
+      expect(screen.getByText(/Đỗ Thị Thanh Liêm/)).toBeInTheDocument();
     });
 
     it('should preserve event titles in Vietnamese', () => {
       render(<Home />);
-      expect(screen.getByText(/TIỆC THÂN MẬT NHÀ GÁI/)).toBeInTheDocument();
-      expect(screen.getByText(/TIỆC THÂN MẬT NHÀ TRAI/)).toBeInTheDocument();
+      expect(screen.getByText(/LỄ VU QUY NHÀ GÁI/)).toBeInTheDocument();
+      expect(screen.getByText(/LỄ THÀNH HÔN NHÀ TRAI/)).toBeInTheDocument();
     });
 
     it('should preserve love story titles in Vietnamese', () => {
@@ -91,7 +91,7 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
 
     it('should preserve Tan Hon location', () => {
       render(<Home />);
-      expect(screen.getByText(/3 Thị trấn Chư Ty, Đức Cơ, Gia Lai/)).toBeInTheDocument();
+      expect(screen.getByText(/Tổ dân phố 3 Thị trấn Chư Ty, Đức Cơ, Gia Lai/)).toBeInTheDocument();
     });
 
     it('should preserve venue name', () => {
@@ -135,7 +135,7 @@ describe('Content Preservation - Requirements 7.1, 7.2, 7.3, 7.4', () => {
 
     it('should have Wedding Events section', () => {
       render(<Home />);
-      const eventsSection = screen.getByText(/TIỆC THÂN MẬT NHÀ GÁI/).closest('section');
+      const eventsSection = screen.getByText(/LỄ VU QUY NHÀ GÁI/).closest('section');
       expect(eventsSection).toBeInTheDocument();
     });
 

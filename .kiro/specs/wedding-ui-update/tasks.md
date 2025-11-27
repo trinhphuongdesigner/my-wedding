@@ -80,9 +80,9 @@
 
 
   - Cập nhật thông tin chú rể: Đình Phương, con ông Trịnh Đình Bình và bà Đinh Thị Thơm
-  - Cập nhật thông tin cô dâu: Phương Hiền, con ông Trần Phú và bà Đỗ Thanh Liêm
+  - Cập nhật thông tin cô dâu: Phương Hiền, con ông Trần Văn Phú và bà Đỗ Thị Thanh Liêm
   - Cập nhật thông tin sự kiện Vu quy: 11h45 ngày 4/4/2026 (Thứ 5) nhằm 17/2/2026 âm lịch tại Grand Palace, 56 Phạm Phú Thứ, Vĩnh Điện, Quảng Nam
-  - Cập nhật thông tin sự kiện Tân hôn: 11h00 ngày 7/4/2026 (Chủ nhật) nhằm 20/2/2026 âm lịch tại Grand Palace, 3 Thị trấn Chư Ty, Đức Cơ, Gia Lai
+  - Cập nhật thông tin sự kiện Tân hôn: 11h00 ngày 7/4/2026 (Chủ nhật) nhằm 20/2/2026 âm lịch tại Grand Palace, Tổ dân phố 3 Thị trấn Chư Ty, Đức Cơ, Gia Lai
   - Cập nhật thông tin ngân hàng chú rể: Trịnh Đình Phương, STK 9386592529, Techcombank Chi nhánh Hải Châu Đà Nẵng
   - Cập nhật thông tin ngân hàng cô dâu: Trần Đỗ Phương Hiền, STK 9386592529, Techcombank Chi nhánh Hải Châu Đà Nẵng
   - Cập nhật countdown date sang 4/4/2026
