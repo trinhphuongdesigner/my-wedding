@@ -417,7 +417,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           {/* Desktop Timeline */}
           <div className="hidden md:block relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gray-200"></div>
@@ -463,31 +463,35 @@ export default function Home() {
                   <p className="font-sans text-xs md:text-sm text-pink-500 mb-2">
                     30/03/2025
                   </p>
-                  <p className="font-sans text-xs md:text-sm text-gray-600">
-                    Buổi tối hôm trước mình cùng nhau ngắm pháo hoa kỷ niệm giải
-                    phóng Quảng Nam, sáng sớm hôm sau lại cùng đi ngắm bình minh
-                    trên biển. Tối hôm ấy anh lại đón em đi ngắm pháo hoa ở Đà
-                    Nẵng, rồi cùng đi dạo trên bán đảo Sơn Trà. Hồi đó em còn
-                    ngại ngùng, chỉ dám dùng hai ngón tay nhẹ bấu lên vai anh để
-                    khỏi tụt về phía trước - mãi sau này khi quen nhau anh mới
-                    biết điều đó, nhưng cử chỉ nhỏ bé ấy đã khiến tim anh rộn
-                    ràng cả đêm. 
-                    <hr />
-                    <br></br>Ngồi bên bờ sông Hàn, mình nói chuyện về nhiều
-                    thứ. Chính khoảnh khắc ấy như có điều gì đó trong cả anh và
-                    em thôi thúc mình phải tiến tới, phải nắm bằng được cơ hội
-                    này. Rồi thuận theo cảm xúc, trên đường về anh đã ngỏ lời
-                    với em. Em ngại ngùng không trả lời ngay, nhưng chính cái
-                    ôm, cái tựa đầu ấy đã "bán đứng" em rồi. Anh như mở cờ trong
-                    bụng, biết mình sắp thành công.
-                    <hr />
-                    <br></br>Nhưng em lại nói em còn rối quá, mọi
-                    chuyện đến quá bất ngờ, cần thời gian suy nghĩ. Cả ngày hôm
-                    ấy anh bồn chồn lo sợ rằng em sẽ "quay xe" vào phút cuối.
-                    May thay không có "plot twist" nào cả - hôm sau em đã đồng ý
-                    làm người yêu anh bằng một tâm thế bình tĩnh và suy nghĩ
-                    thấu đáo. Và đó là ngày anh hạnh phúc nhất.
-                  </p>
+                  <div className="font-sans text-xs md:text-sm text-gray-600 space-y-3">
+                    <p className="indent-8">
+                      Buổi tối hôm trước mình cùng nhau ngắm pháo hoa kỷ niệm giải
+                      phóng Quảng Nam, sáng sớm hôm sau lại cùng đi ngắm bình minh
+                      trên biển. Tối hôm ấy anh lại đón em đi ngắm pháo hoa ở Đà
+                      Nẵng, rồi cùng đi dạo trên bán đảo Sơn Trà. Hồi đó em còn
+                      ngại ngùng, chỉ dám dùng hai ngón tay nhẹ bấu lên vai anh để
+                      khỏi tụt về phía trước - mãi sau này khi quen nhau anh mới
+                      biết điều đó, nhưng cử chỉ nhỏ bé ấy đã khiến tim anh rộn
+                      ràng cả đêm.
+                    </p>
+                    <p className="indent-8">
+                      Ngồi bên bờ sông Hàn, mình nói chuyện về nhiều
+                      thứ. Chính khoảnh khắc ấy như có điều gì đó trong cả anh và
+                      em thôi thúc mình phải tiến tới, phải nắm bằng được cơ hội
+                      này. Rồi thuận theo cảm xúc, trên đường về anh đã ngỏ lời
+                      với em. Em ngại ngùng không trả lời ngay, nhưng chính cái
+                      ôm, cái tựa đầu ấy đã "bán đứng" em rồi. Anh như mở cờ trong
+                      bụng, biết mình sắp thành công.
+                    </p>
+                    <p className="indent-8">
+                      Nhưng em lại nói em còn rối quá, mọi
+                      chuyện đến quá bất ngờ, cần thời gian suy nghĩ. Cả ngày hôm
+                      ấy anh bồn chồn lo sợ rằng em sẽ "quay xe" vào phút cuối.
+                      May thay không có "plot twist" nào cả - hôm sau em đã đồng ý
+                      làm người yêu anh bằng một tâm thế bình tĩnh và suy nghĩ
+                      thấu đáo. Và đó là ngày anh hạnh phúc nhất.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -500,38 +504,43 @@ export default function Home() {
                     Lời Cầu Hôn💍✨
                   </h3>
                   <p className="font-sans text-xs md:text-sm text-violet-500 mb-2">
-                    Sinh nhật lần thứ 27 của em
+                    26/09/2025... Một ngày trước sinh nhật lần thứ 27 của em
                   </p>
-                  <p className="font-sans text-xs md:text-sm text-gray-600">
-                    Để có được khoảnh khắc hoàn hảo ấy, anh đã âm
-                    thầm chuẩn bị từng chi tiết nhỏ nhất - từ chiếc bánh ngọt
-                    ngào, bó hoa tươi thắm, đến chiếc nhẫn lấp lánh mang theo
-                    lời hứa trọn đời.
-                    <hr />
-                    <br></br>Nhưng ngưỡng cửa cuối cùng lại là... chìa khóa
-                    phòng mà em cứ giữ chặt không chịu giao! Anh đã phải "bày
-                    mưu tính kế" với cô chủ, thậm chí còn chuẩn bị cả phương án
-                    phá khóa nếu không được. May mắn thay, trời không phụ lòng
-                    người, plan A của anh đã thành công một cách kỳ diệu - chỉ
-                    cần vặn chìa khóa một vòng rồi vặn ngược lại, cánh cửa đã
-                    "khóa như không khóa". Đội hậu cần của anh đã kịp thời tràn
-                    vào, biến phòng em thành một không gian lãng mạn đầy bất
-                    ngờ.
-                    <hr />
-                    <br></br>Em còn nhớ không, buổi tối hôm đó đi ăn mà anh cứ 5
-                    phút lại phải bỏ em ra ngoài nghe điện thoại - lúc ấy anh lo
-                    lắng đến nỗi tim đập loạn nhịp, sợ kế hoạch sẽ hỏng. Trời
-                    như hiểu tâm trạng anh, cứ mưa tầm tã không ngớt, nhưng nhân
-                    viên còn cẩn thận cầm cả chiếc dù khổng lồ hơn 2m che cho
-                    anh đi lấy xe chở em về.
-                    <hr />
-                    <br></br>Rồi đến khoảnh khắc định mệnh ấy... Anh run rẩy đến
-                    nỗi nói lộn cả lời cầu hôn thành "đồng ý lấy anh làm vợ nhé"
-                    - và em, người em gái tinh ý của anh, vẫn tỉnh táo đủ để bắt
-                    lỗi sai đáng yêu ấy. Dù ngượng ngùng, dù lúng túng, nhưng đó
-                    vẫn là khoảnh khắc đẹp nhất đời anh - khi em gật đầu đồng ý
-                    bước tiếp cùng anh trên con đường phía trước.
-                  </p>
+                  <div className="font-sans text-xs md:text-sm text-gray-600 space-y-3">
+                    <p className="indent-8">
+                      Để có được khoảnh khắc hoàn hảo ấy, anh đã âm
+                      thầm chuẩn bị từng chi tiết nhỏ nhất - từ chiếc bánh ngọt
+                      ngào, bó hoa tươi thắm, đến chiếc nhẫn lấp lánh mang theo
+                      lời hứa trọn đời.
+                    </p>
+                    <p className="indent-8">
+                      Nhưng ngưỡng cửa cuối cùng lại là... chìa khóa
+                      phòng mà em cứ giữ chặt không chịu giao! Anh đã phải "bày
+                      mưu tính kế" với cô chủ, thậm chí còn chuẩn bị cả phương án
+                      phá khóa nếu không được. May mắn thay, trời không phụ lòng
+                      người, plan A của anh đã thành công một cách kỳ diệu - chỉ
+                      cần vặn chìa khóa một vòng rồi vặn ngược lại, cánh cửa đã
+                      "khóa như không khóa". Đội hậu cần của anh đã kịp thời tràn
+                      vào, biến phòng em thành một không gian lãng mạn đầy bất
+                      ngờ.
+                    </p>
+                    <p className="indent-8">
+                      Em còn nhớ không, buổi tối hôm đó đi ăn mà anh cứ 5
+                      phút lại phải bỏ em ra ngoài nghe điện thoại - lúc ấy anh lo
+                      lắng đến nỗi tim đập loạn nhịp, sợ kế hoạch sẽ hỏng. Trời
+                      như hiểu tâm trạng anh, cứ mưa tầm tã không ngớt, nhưng nhân
+                      viên còn cẩn thận cầm cả chiếc dù khổng lồ hơn 2m che cho
+                      anh đi lấy xe chở em về.
+                    </p>
+                    <p className="indent-8">
+                      Rồi đến khoảnh khắc định mệnh ấy... Anh run rẩy đến
+                      nỗi nói lộn cả lời cầu hôn thành "đồng ý lấy anh làm vợ nhé"
+                      - và em, người em gái tinh ý của anh, vẫn tỉnh táo đủ để bắt
+                      lỗi sai đáng yêu ấy. Dù ngượng ngùng, dù lúng túng, nhưng đó
+                      vẫn là khoảnh khắc đẹp nhất đời anh - khi em gật đầu đồng ý
+                      bước tiếp cùng anh trên con đường phía trước.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="w-3 h-3 bg-violet-400 rounded-full border-4 border-white z-10"></div>
@@ -566,75 +575,144 @@ export default function Home() {
           <div className="md:hidden space-y-6">
             {/* Story Item 1 */}
             <div className="reveal">
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-rose-200">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-3 h-3 bg-rose-400 rounded-full flex-shrink-0"></div>
-                  <h3 className="font-sans text-base text-gray-700 font-semibold">
+                  <h3 className="font-sans text-base text-rose-600 font-semibold">
                     Lần Đầu Gặp Gỡ
                   </h3>
                 </div>
-                <p className="font-sans text-xs text-gray-500 mb-2">
-                  Mùa Thu 2020
+                <p className="font-sans text-xs text-rose-500 mb-2">
+                  Cuối xuân năm 2025
                 </p>
                 <p className="font-sans text-sm text-gray-600">
-                  Chúng mình gặp nhau lần đầu vào một buổi chiều mùa thu, khi cả
-                  hai đều không ngờ rằng đó sẽ là khởi đầu cho một câu chuyện
-                  tình yêu đẹp.
+                  Chúng mình đến với nhau từ một lần "tình cờ" đầy "duyên
+                  số"💕 - khi ngón tay anh lướt qua hồ sơ em trên Facebook
+                  Dating, và trái tim anh biết ngay rằng phải dừng lại. Rồi
+                  một buổi chiều cuối xuân ấy, khi nắng vàng nhẹ nhàng rơi
+                  xuống mái tóc em, chúng mình đã gặp nhau. Ai mà ngờ được
+                  rằng đó chính là trang đầu tiên của câu chuyện tình yêu đẹp
+                  nhất đời anh. Còn nhớ hồi đó, em đáng yêu đến nỗi đòi anh
+                  phải gặp ba mẹ trước cả khi được gặp em - vì em sợ anh "bán
+                  sang Cam" mất! Giờ nghĩ lại, có lẽ ngay từ đầu, em đã muốn
+                  chắc chắn rằng anh là người đàn ông đáng tin cậy để trao
+                  trọn con tim mình.
                 </p>
               </div>
             </div>
 
             {/* Story Item 2 */}
             <div className="reveal">
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-pink-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full flex-shrink-0"></div>
-                  <h3 className="font-sans text-base text-gray-700 font-semibold">
+                  <div className="w-3 h-3 bg-pink-400 rounded-full flex-shrink-0"></div>
+                  <h3 className="font-sans text-base text-pink-600 font-semibold">
                     Ngày Kỷ Niệm
                   </h3>
                 </div>
-                <p className="font-sans text-xs text-gray-500 mb-2">
-                  14/02/2021
+                <p className="font-sans text-xs text-pink-500 mb-2">
+                  30/03/2025
                 </p>
-                <p className="font-sans text-sm text-gray-600">
-                  Ngày Valentine đánh dấu mốc quan trọng khi chúng mình chính
-                  thức bắt đầu hành trình cùng nhau.
-                </p>
+                <div className="font-sans text-sm text-gray-600 space-y-3">
+                  <p className="indent-8">
+                    Buổi tối hôm trước mình cùng nhau ngắm pháo hoa kỷ niệm giải
+                    phóng Quảng Nam, sáng sớm hôm sau lại cùng đi ngắm bình minh
+                    trên biển. Tối hôm ấy anh lại đón em đi ngắm pháo hoa ở Đà
+                    Nẵng, rồi cùng đi dạo trên bán đảo Sơn Trà. Hồi đó em còn
+                    ngại ngùng, chỉ dám dùng hai ngón tay nhẹ bấu lên vai anh để
+                    khỏi tụt về phía trước - mãi sau này khi quen nhau anh mới
+                    biết điều đó, nhưng cử chỉ nhỏ bé ấy đã khiến tim anh rộn
+                    ràng cả đêm.
+                  </p>
+                  <p className="indent-8">
+                    Ngồi bên bờ sông Hàn, mình nói chuyện về nhiều
+                    thứ. Chính khoảnh khắc ấy như có điều gì đó trong cả anh và
+                    em thôi thúc mình phải tiến tới, phải nắm bằng được cơ hội
+                    này. Rồi thuận theo cảm xúc, trên đường về anh đã ngỏ lời
+                    với em. Em ngại ngùng không trả lời ngay, nhưng chính cái
+                    ôm, cái tựa đầu ấy đã "bán đứng" em rồi. Anh như mở cờ trong
+                    bụng, biết mình sắp thành công.
+                  </p>
+                  <p className="indent-8">
+                    Nhưng em lại nói em còn rối quá, mọi
+                    chuyện đến quá bất ngờ, cần thời gian suy nghĩ. Cả ngày hôm
+                    ấy anh bồn chồn lo sợ rằng em sẽ "quay xe" vào phút cuối.
+                    May thay không có "plot twist" nào cả - hôm sau em đã đồng ý
+                    làm người yêu anh bằng một tâm thế bình tĩnh và suy nghĩ
+                    thấu đáo. Và đó là ngày anh hạnh phúc nhất.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Story Item 3 */}
             <div className="reveal">
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-violet-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-gold-400 rounded-full flex-shrink-0"></div>
-                  <h3 className="font-sans text-base text-gray-700 font-semibold">
-                    Lời Cầu Hôn
+                  <div className="w-3 h-3 bg-violet-400 rounded-full flex-shrink-0"></div>
+                  <h3 className="font-sans text-base text-violet-600 font-semibold">
+                    Lời Cầu Hôn💍✨
                   </h3>
                 </div>
-                <p className="font-sans text-xs text-gray-500 mb-2">Hè 2024</p>
-                <p className="font-sans text-sm text-gray-600">
-                  Dưới ánh hoàng hôn, anh đã quỳ gối và hỏi em câu hỏi quan
-                  trọng nhất đời anh. Và em đã nói "Có".
+                <p className="font-sans text-xs text-violet-500 mb-2">
+                  26/09/2025... Một ngày trước sinh nhật lần thứ 27 của em
                 </p>
+                <div className="font-sans text-sm text-gray-600 space-y-3">
+                  <p className="indent-8">
+                    Để có được khoảnh khắc hoàn hảo ấy, anh đã âm
+                    thầm chuẩn bị từng chi tiết nhỏ nhất - từ chiếc bánh ngọt
+                    ngào, bó hoa tươi thắm, đến chiếc nhẫn lấp lánh mang theo
+                    lời hứa trọn đời.
+                  </p>
+                  <p className="indent-8">
+                    Nhưng ngưỡng cửa cuối cùng lại là... chìa khóa
+                    phòng mà em cứ giữ chặt không chịu giao! Anh đã phải "bày
+                    mưu tính kế" với cô chủ, thậm chí còn chuẩn bị cả phương án
+                    phá khóa nếu không được. May mắn thay, trời không phụ lòng
+                    người, plan A của anh đã thành công một cách kỳ diệu - chỉ
+                    cần vặn chìa khóa một vòng rồi vặn ngược lại, cánh cửa đã
+                    "khóa như không khóa". Đội hậu cần của anh đã kịp thời tràn
+                    vào, biến phòng em thành một không gian lãng mạn đầy bất
+                    ngờ.
+                  </p>
+                  <p className="indent-8">
+                    Em còn nhớ không, buổi tối hôm đó đi ăn mà anh cứ 5
+                    phút lại phải bỏ em ra ngoài nghe điện thoại - lúc ấy anh lo
+                    lắng đến nỗi tim đập loạn nhịp, sợ kế hoạch sẽ hỏng. Trời
+                    như hiểu tâm trạng anh, cứ mưa tầm tã không ngớt, nhưng nhân
+                    viên còn cẩn thận cầm cả chiếc dù khổng lồ hơn 2m che cho
+                    anh đi lấy xe chở em về.
+                  </p>
+                  <p className="indent-8">
+                    Rồi đến khoảnh khắc định mệnh ấy... Anh run rẩy đến
+                    nỗi nói lộn cả lời cầu hôn thành "đồng ý lấy anh làm vợ nhé"
+                    - và em, người em gái tinh ý của anh, vẫn tỉnh táo đủ để bắt
+                    lỗi sai đáng yêu ấy. Dù ngượng ngùng, dù lúng túng, nhưng đó
+                    vẫn là khoảnh khắc đẹp nhất đời anh - khi em gật đầu đồng ý
+                    bước tiếp cùng anh trên con đường phía trước.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Story Item 4 */}
             <div className="reveal">
-              <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <div className="bg-white p-4 rounded-lg border-2 border-slate-200">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-gradient-to-br from-rose-400 to-blue-400 rounded-full flex-shrink-0"></div>
-                  <h3 className="font-sans text-base text-gray-700 font-semibold">
-                    Đám Cưới
+                  <div className="w-3 h-3 bg-gradient-to-br from-rose-400 to-slate-400 rounded-full flex-shrink-0"></div>
+                  <h3 className="font-sans text-base text-slate-600 font-semibold">
+                    Đám Cưới💕
                   </h3>
                 </div>
-                <p className="font-sans text-xs text-gray-500 mb-2">
+                <p className="font-sans text-xs text-slate-500 mb-2">
                   04/04/2026
                 </p>
                 <p className="font-sans text-sm text-gray-600">
-                  Ngày mà chúng mình chính thức trở thành vợ chồng, bắt đầu
-                  chương mới của cuộc đời.
+                  Ngày trọng đại mà hai trái tim chúng mình chính thức hòa làm
+                  một, khi anh được nắm tay em bước qua ngưỡng cửa hạnh phúc,
+                  cùng nhau viết nên những trang đầu tiên của cuộc đời chung -
+                  nơi mỗi ngày đều tràn ngập tình yêu và những khoảnh khắc
+                  đáng nhớ bên nhau.
                 </p>
               </div>
             </div>
