@@ -826,13 +826,13 @@ export default function Home() {
 
               {/* Address */}
               <p className="text-center font-sans text-base md:text-lg leading-relaxed mb-8 px-4">
-                <span className="text-rose-400">Địa chỉ:</span> <span className="font-medium text-rose-400">56 Phạm Phú Thứ, Vĩnh Điện, Quảng Nam</span>
+                <span className="text-rose-400">Địa chỉ:</span> <span className="font-medium text-rose-400">Nhà hàng Việt Cường 21 - 23 -25 Phan Khôi, Điện Bàn, Quảng Nam</span>
               </p>
 
               {/* Direction Button */}
               <div className="text-center">
                 <a
-                  href="https://maps.app.goo.gl/5nGBPV6fn27ouonG8"
+                  href="https://maps.app.goo.gl/Uv1uMxSBr2nTFCa76"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-rose-400 hover:bg-rose-500 text-white rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
@@ -881,10 +881,10 @@ export default function Home() {
 
                 <div className="text-center">
                   <div className="font-event text-purple-600 text-sm md:text-base mb-2 tracking-widest">
-                    THỨ BẢY
+                    THỨ HAI
                   </div>
                   <div className="font-event text-6xl md:text-7xl text-purple-600">
-                    11
+                    13
                   </div>
                 </div>
 
@@ -902,7 +902,7 @@ export default function Home() {
 
               {/* Lunar Date */}
               <p className="text-center font-sans text-sm md:text-base text-purple-600 mb-8">
-                (Tức ngày 24 tháng 3 năm Bính Ngọ âm lịch)
+                (Tức ngày 26 tháng 2 năm Bính Ngọ âm lịch)
               </p>
 
               {/* Venue Title */}
@@ -918,7 +918,7 @@ export default function Home() {
               {/* Direction Button */}
               <div className="text-center">
                 <a
-                  href="https://maps.app.goo.gl/XEVbDMVyagu8itUZ6"
+                  href="https://maps.app.goo.gl/94xfH9Yu3sG1tbLA9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
